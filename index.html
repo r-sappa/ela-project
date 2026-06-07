@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO / sharing basics -->
+  <title>Sri Nihal Tammana: The Power of a Story | Recycle My Battery</title>
+  <meta name="description"
+        content="How one news article turned a ten-year-old into the founder of Recycle My Battery, a mission to keep 15 billion batteries out of landfills. A profile by Reyansh." />
+  <meta name="author" content="Reyansh" />
+  <meta name="theme-color" content="#0A2E22" />
+
+  <!-- Local SVG favicon (no network needed) -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Accessibility: lets keyboard users skip the nav and jump to content -->
+  <a class="skip-link" href="#hero">Skip to content</a>
+
+  <!-- Thin "charge" bar that fills as you scroll (set by script.js) -->
+  <div class="scroll-progress" aria-hidden="true">
+    <span class="scroll-progress__fill" id="scrollProgress"></span>
+  </div>
+
+  <!-- ============================ STICKY NAV ============================ -->
+  <header class="nav" id="nav">
+    <nav class="nav__inner" aria-label="Primary">
+      <a class="nav__brand" href="#hero">
+        <!-- Inline battery mark so the logo is crisp at any size and needs no image file -->
+        <svg class="nav__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect x="5" y="11" width="18" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="24" y="14" width="2.6" height="5" rx="1" fill="currentColor"/>
+          <path d="M16 10.5l-4 7.2h3l-1.1 4.8 4.9-7.6h-3z" fill="#C8FF4D"/>
+        </svg>
+        <span class="nav__brand-text">Recycle My Battery</span>
+      </a>
+
+      <!-- Mobile menu toggle (hidden on desktop via CSS) -->
+      <button class="nav__toggle" id="navToggle"
+              aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <!-- Anchor links, one per section, for instant jump-to-section during the live talk -->
+      <ul class="nav__menu" id="navMenu">
+        <li><a class="nav__link" href="#hero">Home</a></li>
+        <li><a class="nav__link" href="#spark">The Spark</a></li>
+        <li><a class="nav__link" href="#problem">The Problem</a></li>
+        <li><a class="nav__link" href="#struggle">The Struggle</a></li>
+        <li><a class="nav__link" href="#action">Action</a></li>
+        <li><a class="nav__link" href="#idea">Bigger Idea</a></li>
+        <li><a class="nav__link" href="#closing">Closing</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================ 1. HERO ============================ -->
+    <section class="section hero section--dark" id="hero">
+      <div class="container hero__inner">
+        <p class="eyebrow" data-reveal>The Power of a Story</p>
+        <h1 class="hero__name" data-reveal>Sri Nihal Tammana</h1>
+        <p class="hero__org" data-reveal>Founder of <span class="accent">Recycle My Battery</span></p>
+
+        <!-- One-line theme hook -->
+        <p class="hero__hook" data-reveal>
+          One story. A ten-year-old. A mission to recycle 15&nbsp;billion batteries.
+        </p>
+
+        <p class="hero__meta" data-reveal>17 · Junior at Monroe Township High School, New Jersey</p>
+
+        <!-- Scroll cue -->
+        <a class="scroll-cue" href="#spark" aria-label="Scroll to the next section">
+          <span class="scroll-cue__text">Scroll to begin</span>
+          <span class="scroll-cue__chevron" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================ 2. THE SPARK ============================ -->
+    <section class="section section--light" id="spark">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow eyebrow--dark" data-reveal>02 · The Spark</p>
+          <h2 class="heading" data-reveal>How one article lit the fuse</h2>
+        </header>
+
+        <!-- Narrative, styled like an opening magazine column (drop cap on first paragraph) -->
+        <div class="prose" data-reveal>
+          <p class="prose__lead">
+            On his tenth birthday in 2019, Sri Nihal Tammana read a news article about a
+            lithium-ion battery that exploded in California. Most kids his age were busy
+            with their presents. He could not look away from the devastation: the immense
+            fires and the contamination that followed.
+          </p>
+          <p>
+            He had cared about the environment since he was little, growing up watching
+            videos about climate change and hating to see anyone pollute the planet. This
+            felt different, though. The article was the moment he went from caring about the
+            problem to deciding to act on it.
+          </p>
+          <p>
+            When he looked into it, he learned that battery pollution is a huge problem that
+            almost nobody knows about, and he decided to be one of the first to do something.
+            A fact can tell you a problem exists. A story is what makes you act on it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 3. THE PROBLEM ============================ -->
+    <section class="section section--dark" id="problem">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow" data-reveal>03 · The Problem</p>
+          <h2 class="heading" data-reveal>The numbers almost nobody knows</h2>
+        </header>
+
+        <!-- Big, bold animated stats (count up on scroll, see script.js) -->
+        <div class="stats">
+          <div class="stat" data-reveal>
+            <!-- The visible text is the final value, so it still reads correctly with JS off.
+                 script.js animates from 0 up to data-count-to. -->
+            <span class="stat__num" data-count-to="15" data-suffix="B">15B</span>
+            <span class="stat__label">batteries thrown away worldwide every year</span>
+          </div>
+
+          <div class="stat" data-reveal>
+            <span class="stat__num" data-count-to="1" data-prefix="~" data-suffix="%">~1%</span>
+            <span class="stat__label">of people know it is even a problem</span>
+
+            <!-- Visual for "only 1%": a nearly-empty bar drives the point home -->
+            <div class="awarebar" aria-hidden="true">
+              <span class="awarebar__fill"></span>
+            </div>
+            <span class="awarebar__caption">1% aware · 99% unaware</span>
+          </div>
+        </div>
+
+        <!-- What's actually inside a battery -->
+        <div class="metals" data-reveal>
+          <p class="metals__title">What a single alkaline battery carries into the ground:</p>
+          <ul class="metals__list">
+            <li class="chip">Zinc</li>
+            <li class="chip">Manganese</li>
+            <li class="chip">Nickel</li>
+            <li class="chip chip--trace">Cadmium <span>trace</span></li>
+          </ul>
+        </div>
+
+        <p class="problem__explainer" data-reveal>
+          Each battery only holds <strong>tiny</strong> amounts of these metals. But tiny
+          amounts times <strong>billions</strong> of batteries add up fast, and they seep into
+          our soil and water. The damage builds slowly and stays out of sight, so most people
+          never notice. That is the part a story has to fix.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ 4. THE STRUGGLE ============================ -->
+    <section class="section section--light" id="struggle">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow eyebrow--dark" data-reveal>04 · The Struggle</p>
+          <h2 class="heading" data-reveal>Every founder gets told no</h2>
+        </header>
+
+        <div class="struggle__layout">
+          <div class="prose" data-reveal>
+            <p>
+              He was ten years old, and a lot of people heard his age before they heard his
+              idea. When he went door to door in July 2019 to talk about recycling used
+              batteries, plenty of them brushed him off.
+            </p>
+            <p>
+              The big organizations were not much easier. Call2Recycle, one of the largest
+              battery recycling groups in North America, said no the first time he asked. For a
+              kid with a clipboard and a stack of battery-shaped flyers, it would have been an
+              easy place to stop.
+            </p>
+            <p>
+              He kept going anyway.
+            </p>
+
+            <!-- Paraphrase, NOT a verbatim quote. The transcript only has Sri Nihal recalling
+                 his dad's advice, so it is styled as an aside, never as a direct quote. -->
+            <p class="aside">
+              <span class="aside__label">The advice that kept him going</span>
+              His dad told him he couldn't let one rejection define the project, and to keep
+              pushing until he found a way through.
+            </p>
+          </div>
+
+          <!-- Verbatim pull quotes, taken word-for-word from the interview transcript. -->
+          <div class="quotes">
+            <blockquote class="pquote" data-reveal>
+              <p>“You're way too young to be doing something like a non-profit. Come on, you're 10 years old. You should be in school or playing outside.”</p>
+              <cite>What people told him</cite>
+            </blockquote>
+
+            <blockquote class="pquote pquote--accent" data-reveal>
+              <p>“Age is just a number. You can make a change and make the world a better place regardless of how old you are.”</p>
+              <cite>Sri Nihal Tammana</cite>
+            </blockquote>
+
+            <blockquote class="pquote" data-reveal>
+              <p>“You have no idea how many emails we sent them!”</p>
+              <cite>Sri Nihal Tammana</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 5. TURNING STORY INTO ACTION ============================ -->
+    <section class="section section--light section--alt" id="action">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow eyebrow--dark" data-reveal>05 · Turning Story into Action</p>
+          <h2 class="heading" data-reveal>Six pivots from idea to movement</h2>
+          <p class="section__sub" data-reveal>
+            Every time the facts alone fell flat, he found a way to make people actually care.
+          </p>
+        </header>
+
+        <!-- Stepped vertical timeline -->
+        <ol class="timeline">
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__node">1</span>
+            <div class="timeline__card">
+              <h3>Lectures fell flat</h3>
+              <p>In July 2019 he started going door to door with a short pitch and battery-shaped flyers. People got bored fast, and a lot of the flyers probably went straight in the trash.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__node">2</span>
+            <div class="timeline__card">
+              <h3>Candy for batteries</h3>
+              <p>So he switched to battery drives with rewards. Kids who brought in used batteries got candy, and suddenly people started paying attention.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__node">3</span>
+            <div class="timeline__card">
+              <h3>The “Battery Challenge”</h3>
+              <p>He turned recycling into a contest between classrooms, with a pizza party for the winning class. A game beat a lecture every single time.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__node">4</span>
+            <div class="timeline__card">
+              <h3>Call2Recycle says yes</h3>
+              <p>The group that first said no ended up changing its mind. He kept emailing until the CEO said yes and sent battery bins for free.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__node">5</span>
+            <div class="timeline__card">
+              <h3>COVID forces a pivot</h3>
+              <p>When the pandemic closed the schools, he moved the whole thing online and told the story on social media instead.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__node">6</span>
+            <div class="timeline__card">
+              <h3>The story goes global</h3>
+              <p>It kept spreading until it reached India, which turned a New Jersey project into a worldwide one.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================ 6. THE BIGGER IDEA ============================ -->
+    <section class="section section--dark" id="idea">
+      <div class="container idea__inner">
+        <p class="eyebrow" data-reveal>06 · The Bigger Idea</p>
+        <h2 class="idea__statement" data-reveal>
+          He isn't counting batteries. <span class="accent">He's changing culture.</span>
+        </h2>
+
+        <div class="prose prose--invert idea__body" data-reveal>
+          <p>
+            The collection totals matter, but they were never really the goal. What Sri Nihal
+            wants is for people to teach their friends and family, and to pass the story on the
+            way it was once passed to him. Keeping batteries out of a landfill is good. Changing
+            someone's habit for good is better. And one person who goes on to convince ten more
+            is how this whole thing actually grows.
+          </p>
+        </div>
+
+        <blockquote class="pullquote" data-reveal>
+          <p>“Your age does not matter. You could be five years old, but if you have determination in your heart, you can change the world.”</p>
+          <cite>Sri Nihal Tammana</cite>
+        </blockquote>
+
+        <p class="idea__tagline" data-reveal>
+          Facts inform. <span class="accent">Stories move.</span> Recycle My Battery runs on the second one.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ 7. CLOSING ============================ -->
+    <section class="section section--dark section--closing" id="closing">
+      <div class="container closing__inner">
+        <p class="eyebrow" data-reveal>07 · Closing</p>
+        <h2 class="heading heading--invert" data-reveal>His advice to a ten-year-old</h2>
+
+        <div class="prose prose--invert" data-reveal>
+          <p>
+            His advice to anyone starting young is simple. Age does not matter. What matters is
+            passion, perseverance, and a work ethic that outlasts the first no. He was ten when
+            a story changed him, and he has spent every year since proving that a young person
+            with enough determination can change things too.
+          </p>
+          <p>And if he could go back and tell his own ten-year-old self one thing, it would be this:</p>
+        </div>
+
+        <blockquote class="pullquote" data-reveal>
+          <p>“Keep pushing. You are going to do great things.”</p>
+          <cite>Sri Nihal Tammana</cite>
+        </blockquote>
+
+        <p class="closing__theme" data-reveal>One story can start everything.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>A profile of <strong>Sri Nihal Tammana</strong> · Recycle My Battery</p>
+      <p class="footer__credit">Created by Reyansh for “The Power of a Story.” <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <!-- Vanilla JS: scroll progress, count-ups, reveals, active nav, mobile menu -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<!-- Simple battery + charge mark used as the site favicon (scalable, works offline). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Recycle My Battery">
+  <rect width="32" height="32" rx="7" fill="#0A2E22"/>
+  <rect x="6" y="11" width="17" height="11" rx="2.5" fill="none" stroke="#F7F4EC" stroke-width="1.8"/>
+  <rect x="24" y="14" width="2.6" height="5" rx="1" fill="#F7F4EC"/>
+  <path d="M16 10.5l-4 7.2h3l-1.1 4.8 4.9-7.6h-3z" fill="#C8FF4D"/>
+</svg>
