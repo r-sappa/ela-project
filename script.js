@@ -145,9 +145,14 @@
       var target = sections[clamped];
       if (!target) { return; }
       currentIndex = clamped;
-      // No behavior arg: the CSS `scroll-behavior` (smooth, or auto under
-      // prefers-reduced-motion) decides how it scrolls.
-      target.scrollIntoView({ block: "start" });
+      // Land the section's top exactly under the fixed nav (one offset, no bleed
+      // from the previous section). Measure the nav each time in case it resized.
+      var navH = nav ? nav.getBoundingClientRect().height : 0;
+      var y = target.getBoundingClientRect().top + window.pageYOffset - navH;
+      window.scrollTo({
+        top: Math.max(0, Math.round(y)),
+        behavior: prefersReducedMotion ? "auto" : "smooth"
+      });
       // Move focus to the heading so screen readers announce the new section,
       // without scrolling the page a second time.
       var focusTarget = target.querySelector("h1, h2") || target;
